@@ -1,6 +1,3 @@
 Write your reflection here.
 
-See reflection.md for what makes a good reflection — be specific, use the
-terminology from this assignment (package, module, ETL, coercion, public API,
-relative import, accumulator, group by, unit vs. integration test), and make it
-actionable.
+This module helped me undersand how files and packages work. At first I was running into many errors because I had not updated the file in the correct order as I was writing the functions in my code, so I now understand how the syntax affects the usability of the code. Once I started fully understanding and gettting into the habit of how I should be updating the displays/extractions/tranforms files and then the __init__.py one I was able to recognize some errors I had made before that my vscode did not catch and still let function in a different way. Though it took a while to grasp, I definitely see the use in using packages to import the functions I need more efficiently.
