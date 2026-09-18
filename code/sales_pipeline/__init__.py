@@ -73,8 +73,8 @@ HOW TO BUILD IT
 #       Start with only the functions you have actually written (see note 2 above),
 #       and come back to add the rest as you go.
 from .extract import get_raw_sales_data
-from .transform import clean_sales_data, calculate_total_revenue #, summarize_by_item, find_top_entry
-from .display import print_sales_table
+from .transform import clean_sales_data, calculate_total_revenue, summarize_by_item, summarize_by_day, find_top_entry  
+from .display import print_sales_table, print_day_table, print_item_table
 
 
 # `__all__` is a list of strings naming the public API. It does two jobs.
@@ -94,5 +94,10 @@ __all__ = [
     "get_raw_sales_data",
     "clean_sales_data",
     "calculate_total_revenue",
-    "print_sales_table"
+    "print_sales_table",
+    "print_day_table",
+    "print_item_table",
+    "summarize_by_item",
+    "summarize_by_day",
+    "find_top_entry"
 ]
