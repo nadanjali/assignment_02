@@ -191,6 +191,15 @@ def summarize_by_item(cleaned_data: list[dict]) -> list[dict]:
       "sort by revenue, biggest first, and use the name to break ties."
     """
     # TODO: your code here
+    totals = {}
+    for row in cleaned_data:
+        item = row["item"]
+        if item not in totals:
+            totals[item] = {"item": item, "units_sold": 0, "revenue": 0.0}
+        totals[item]["units_sold"] += row["qty"]
+        totals[item]["revenue"] += row["total_revenue"]
+    return sorted(totals.values(), key=lambda entry: (-entry["revenue"], entry["item"]))
+    
     pass
 
 
@@ -259,4 +268,11 @@ def find_top_entry(summary: list[dict], field: str = "revenue") -> dict:
       someone asks for `units_sold`.
     """
     # TODO: your code here
+    if not summary:
+        return {}
+    top_entry = summary[0]
+    for entry in summary:
+        if entry[field] > top_entry[field]:
+            top_entry = entry
+    return top_entry
     pass
